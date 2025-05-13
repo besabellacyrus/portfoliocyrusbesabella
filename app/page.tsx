@@ -524,6 +524,11 @@ export default function Home() {
 
       <footer className="text-center text-sm py-6 text-gray-500 bg-white">
         © 2025 Cyrus Besabella's Portfolio. All rights reserved.
+        <br />
+        <small>
+          "I can do all things through Christ which strengtheneth me."
+          -Philippians 4:13
+        </small>
       </footer>
     </main>
   );
