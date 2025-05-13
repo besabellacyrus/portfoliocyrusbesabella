@@ -379,7 +379,7 @@ export default function Home() {
       </section>
 
       <section className="max-w-4xl mx-auto">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-items-center mb-20">
+        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-items-center mb-20">
           <img
             src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
             alt="React"
