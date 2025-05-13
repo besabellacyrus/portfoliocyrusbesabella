@@ -106,7 +106,7 @@ export default function Home() {
             <div className="flex justify-end">
               <span className="inline-flex space-x-2">
                 <small className="text-gray-600">
-                  <a href="https://youtu.be/G71MR9ufKdI" target="_blank">
+                  <a href="https://youtu.be/7Wpp7gRqL1U" target="_blank">
                     <img
                       className="w-5 h-5"
                       src="/icons/yt.svg"
