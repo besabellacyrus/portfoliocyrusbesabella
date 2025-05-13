@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const scrollTo = (id: string) => {
   const el = document.getElementById(id);
@@ -8,9 +8,16 @@ const scrollTo = (id: string) => {
 };
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     document.title = "My Portfolio";
   }, []);
+
+  const moveTo = (section) => {
+    scrollTo(section);
+    setIsOpen(false);
+  };
 
   return (
     <main className="text-gray-800">
@@ -18,33 +25,94 @@ export default function Home() {
         <nav>
           <div className="h-[100px] max-w-4xl mx-auto text-center px-4 py-3 flex justify-between items-center">
             <h1 className="font-bold text-xl">[CB]</h1>
-            <div className="space-x-4">
+
+            {/* Burger Button */}
+            <button
+              className="md:hidden text-gray-800 focus:outline-none"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+            <div className=" hidden md:flex space-x-4">
               <button
-                onClick={() => scrollTo("home")}
+                onClick={() => moveTo("work")}
                 className="hover:text-blue-500"
               >
-                #Work
+                Work
               </button>
               <button
-                onClick={() => scrollTo("experience")}
+                onClick={() => moveTo("experience")}
                 className="hover:text-blue-500"
               >
-                #Experience
+                Experience
               </button>
               <button
-                onClick={() => scrollTo("education")}
+                onClick={() => moveTo("education")}
                 className="hover:text-blue-500"
               >
-                #Education
+                Education
               </button>
               <button
-                onClick={() => scrollTo("contact")}
+                onClick={() => moveTo("contact")}
                 className="hover:text-blue-500"
               >
-                #Contact
+                Contact
               </button>
             </div>
-            <button className="download-cv-btn">
+            {/* Mobile Menu */}
+            {isOpen && (
+              <div className="mobile-nav bg-white md:hidden px-4 pt-3 pb-4 space-y-2">
+                <div className="mobile-content">
+                  <button
+                    onClick={() => moveTo("work")}
+                    className="hover:text-blue-500"
+                  >
+                    Work
+                  </button>
+                  <button
+                    onClick={() => moveTo("experience")}
+                    className="hover:text-blue-500"
+                  >
+                    Experience
+                  </button>
+                  <button
+                    onClick={() => moveTo("education")}
+                    className="hover:text-blue-500"
+                  >
+                    Education
+                  </button>
+                  <button
+                    onClick={() => moveTo("contact")}
+                    className="hover:text-blue-500"
+                  >
+                    Contact
+                  </button>
+                  <button className="download-cv-btn">
+                    <a
+                      href="https://docs.google.com/document/d/1zCESeI2ttEfAnGz7MaV5qHME44tuMCy5KGYg5nhpbug/edit?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      download
+                    >
+                      Download CV
+                    </a>
+                  </button>
+                </div>
+              </div>
+            )}
+            <button className="download-cv-btn hidden md:flex">
               <a
                 href="https://docs.google.com/document/d/1zCESeI2ttEfAnGz7MaV5qHME44tuMCy5KGYg5nhpbug/edit?usp=sharing"
                 target="_blank"

@@ -22,6 +22,20 @@ header {
 }
 
 #experience,
-#education {
+#education,
+#work {
   padding-top: 110px;
+}
+
+.mobile-nav {
+  position: absolute;
+  height: 400px;
+  top: 101px;
+  right: 0;
+  width: 100vw;
+}
+
+.mobile-content {
+  display: grid;
+  grid-gap: 25px;
 }
