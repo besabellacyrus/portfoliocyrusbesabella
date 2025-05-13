@@ -89,7 +89,7 @@ export default function Home() {
 
       <section id="work" className="max-w-4xl mx-auto py-20 px-10 bg-white">
         <h2 className="text-3xl font-semibold mb-6">Work</h2>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid lg:grid-cols-[2fr_1fr] gap-4">
           <div>
             <img src="/projects/wip-user-management-system.jpg" alt="" />
           </div>
@@ -103,20 +103,31 @@ export default function Home() {
               user, Role based module, can export data to CSV
             </p>
             <br />
-            <span>
-              <small className="text-gray-600">
-                <a
-                  href="https://github.com/besabellacyrus/nuxt-prisma-postgres-docker"
-                  target="_blank"
-                >
-                  <img
-                    className="w-5 h-5"
-                    src="/icons/github-mark.svg"
-                    alt="GitHub"
-                  />
-                </a>
-              </small>
-            </span>
+            <div className="flex justify-end">
+              <span className="inline-flex space-x-2">
+                <small className="text-gray-600">
+                  <a href="https://youtu.be/G71MR9ufKdI" target="_blank">
+                    <img
+                      className="w-5 h-5"
+                      src="/icons/yt.svg"
+                      alt="YouTube"
+                    />
+                  </a>
+                </small>
+                <small className="text-gray-600">
+                  <a
+                    href="https://github.com/besabellacyrus/nuxt-prisma-postgres-docker"
+                    target="_blank"
+                  >
+                    <img
+                      className="w-5 h-5"
+                      src="/icons/github-mark.svg"
+                      alt="GitHub"
+                    />
+                  </a>
+                </small>
+              </span>
+            </div>
           </div>
         </div>
       </section>
