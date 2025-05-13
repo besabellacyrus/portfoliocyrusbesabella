@@ -519,6 +519,22 @@ export default function Home() {
               besabellacyrus@gmail.com
             </a>
           </p>
+          <div className="mt-10 text-gray-400">
+            <a href="https://github.com/besabellacyrus" target="_blank">
+              GitHub
+            </a>
+            &nbsp; &nbsp; |&nbsp; &nbsp;
+            <a href="https://www.instagram.com/besabellasai/" target="_blank">
+              Instagram
+            </a>
+            &nbsp; &nbsp; |&nbsp; &nbsp;
+            <a
+              href="https://www.facebook.com/cyrus.besabella.9"
+              target="_blank"
+            >
+              Facebook
+            </a>
+          </div>
         </div>
       </section>
 
