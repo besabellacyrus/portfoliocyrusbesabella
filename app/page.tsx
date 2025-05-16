@@ -218,7 +218,7 @@ export default function Home() {
                 Legacy Admin Panel - maintain and create new features using
                 AngularJS with TypeScript (Backend Cloud function and Firebase)
               </li>
-              <li>Minor UI task for Customer App using React Native.</li>
+              <li>UI task for Customer App using React Native.</li>
               <li>
                 Admin Panel Revamp(ongoing project.) - create new features using
                 React/NextJS with TypeScript.
